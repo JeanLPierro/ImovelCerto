@@ -17,6 +17,7 @@ class CreatePropietariosTable extends Migration
             $table->increments('id');
             $table->string('nome', 50);
             $table->string('cpf', 14)->unique();
+            $table->string('rg', 15)->nullable();
             $table->string('fone_res', 24)->nullable();
             $table->string('fone_cel', 15);
             $table->string('endereco', 50);
@@ -26,6 +27,7 @@ class CreatePropietariosTable extends Migration
             $table->char('uf', 2);
             $table->string('email',50);
             $table->date('dt_nasc');
+
             $table->timestamps();
         });
     }
